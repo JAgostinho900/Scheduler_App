@@ -3,11 +3,7 @@ package com.jagostinho.scheduler_api.application;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.jagostinho.scheduler_api.business.Task;
 import com.jagostinho.scheduler_api.service.TaskService;
@@ -29,8 +25,24 @@ public class TaskController {
         return taskService.getTasks();
     }
 
+    @GetMapping
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    public Task getTaskById(@PathVariable("id") Long id) {
+        return taskService.getTaskById(id);
+    }
+
     @PostMapping
-    public Task createTask(@RequestBody Task task) {
-        return taskService.createTask(task);
+    public void createTask(@RequestBody Task task) {
+        taskService.createTask(task);
+    }
+
+    @PutMapping
+    public void updateTask(@RequestBody Task task) {
+        taskService.updateTask(task);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public void deleteTask(@PathVariable("id") Long id) {
+        taskService.deleteTask(id);
     }
 }

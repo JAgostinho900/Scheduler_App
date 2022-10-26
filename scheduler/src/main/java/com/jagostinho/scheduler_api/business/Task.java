@@ -1,40 +1,54 @@
 package com.jagostinho.scheduler_api.business;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+import lombok.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
-@Table
-public class Task {
+@Table(name = "tasks")
+public class Task implements Serializable {
 
     // #region Properties
 
+    // @Id
+    // @SequenceGenerator(name = "task_sequence", sequenceName = "task_sequence",
+    // allocationSize = 1)
+    // @GeneratedValue(strategy = GenerationType.SEQUENCE, generator =
+    // "task_sequence")
     @Id
-    @SequenceGenerator(name = "task_sequence", sequenceName = "task_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "task_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column
     private Date createdAt;
+    @Column
     private Date updatedAt;
+    @Column
     private Date dueDate;
+    @Column
     private Date resolvedAt;
+    @Column
     private String title;
+    @Column
     private String description;
+    @Column
     private Integer priority;
+    @Column
     private Boolean status;
 
     // #endregion
 
     // #region Constructors
 
-    public Task() {
+    // public Task() {
 
-    }
+    // }
 
     public Task(Long id, Date createdAt, Date updatedAt, Date dueDate, Date resolvedAt, String title,
             String description, Integer priority, Boolean status) {
@@ -67,109 +81,109 @@ public class Task {
 
     // #region Id
 
-    public long getId() {
-        return id;
-    }
+    // public Long getId() {
+    // return id;
+    // }
 
-    public void setId(long id) {
-        this.id = id;
-    }
+    // public void setId(Long id) {
+    // this.id = id;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region CreatedAt
+    // // #region CreatedAt
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
+    // public Date getCreatedAt() {
+    // return createdAt;
+    // }
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
+    // public void setCreatedAt(Date createdAt) {
+    // this.createdAt = createdAt;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region UpdatedAt
+    // // #region UpdatedAt
 
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
+    // public Date getUpdatedAt() {
+    // return updatedAt;
+    // }
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
+    // public void setUpdatedAt(Date updatedAt) {
+    // this.updatedAt = updatedAt;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region DueDate
+    // // #region DueDate
 
-    public Date getDueDate() {
-        return dueDate;
-    }
+    // public Date getDueDate() {
+    // return dueDate;
+    // }
 
-    public void setDueDate(Date dueDate) {
-        this.dueDate = dueDate;
-    }
+    // public void setDueDate(Date dueDate) {
+    // this.dueDate = dueDate;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region ResolvedAt
+    // // #region ResolvedAt
 
-    public Date getResolvedAt() {
-        return resolvedAt;
-    }
+    // public Date getResolvedAt() {
+    // return resolvedAt;
+    // }
 
-    public void setResolvedAt(Date resolvedAt) {
-        this.resolvedAt = resolvedAt;
-    }
+    // public void setResolvedAt(Date resolvedAt) {
+    // this.resolvedAt = resolvedAt;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region Title
+    // // #region Title
 
-    public String getTitle() {
-        return title;
-    }
+    // public String getTitle() {
+    // return title;
+    // }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    // public void setTitle(String title) {
+    // this.title = title;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region Description
+    // // #region Description
 
-    public String getDescription() {
-        return description;
-    }
+    // public String getDescription() {
+    // return description;
+    // }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    // public void setDescription(String description) {
+    // this.description = description;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region Priority
+    // // #region Priority
 
-    public int getPriority() {
-        return priority;
-    }
+    // public Integer getPriority() {
+    // return priority;
+    // }
 
-    public void setPriority(int priority) {
-        this.priority = priority;
-    }
+    // public void setPriority(Integer priority) {
+    // this.priority = priority;
+    // }
 
-    // #endregion
+    // // #endregion
 
-    // #region Status
+    // // #region Status
 
-    public Boolean getStatus() {
-        return status;
-    }
+    // public Boolean getStatus() {
+    // return status;
+    // }
 
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
+    // public void setStatus(Boolean status) {
+    // this.status = status;
+    // }
 
     // #endregion
 
