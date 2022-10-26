@@ -1,4 +1,4 @@
-package com.jagostinho.scheduler_app;
+package com.jagostinho.scheduler_app.Scheduler;
 
 import java.util.Timer;
 import java.util.TimerTask;
