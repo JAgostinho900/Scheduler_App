@@ -1,4 +1,4 @@
-package com.jagostinho.scheduler_api.business;
+package com.jagostinho.scheduler_api.domain;
 
 import java.io.Serializable;
 import java.sql.Date;
