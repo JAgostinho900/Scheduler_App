@@ -11,5 +11,7 @@ public class SchedulerApplication {
 	}
 
 	// NTH: Return custom message
+	// Mandar email para perguntar se há problema teres feito o scheduler num
+	// programa á parte
 
 }
