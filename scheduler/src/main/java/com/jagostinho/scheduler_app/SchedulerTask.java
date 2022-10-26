@@ -8,8 +8,6 @@ import com.jagostinho.scheduler_api.domain.Task;
 
 public class SchedulerTask extends TimerTask {
 
-    // TODO: Tem de cumprir criterios SOLID
-
     @Override
     public void run() {
         String url = "http://localhost:8080/api/v1/task";

@@ -2,6 +2,7 @@ package com.jagostinho.scheduler_api.domain;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
@@ -21,13 +22,13 @@ public class Task implements Serializable {
     private Long id;
 
     @Column
-    private Date createdAt;
+    private LocalDateTime createdAt;
     @Column
-    private Date updatedAt;
+    private LocalDateTime updatedAt;
     @Column
-    private Date dueDate;
+    private LocalDateTime dueDate;
     @Column
-    private Date resolvedAt;
+    private LocalDateTime resolvedAt;
     @Column
     private String title;
     @Column
@@ -41,7 +42,8 @@ public class Task implements Serializable {
 
     // #region Constructors
 
-    public Task(Long id, Date createdAt, Date updatedAt, Date dueDate, Date resolvedAt, String title,
+    public Task(Long id, LocalDateTime createdAt, LocalDateTime updatedAt, LocalDateTime dueDate,
+            LocalDateTime resolvedAt, String title,
             String description, Integer priority, Boolean status) {
         this.id = id;
         this.createdAt = createdAt;
@@ -54,7 +56,8 @@ public class Task implements Serializable {
         this.status = status;
     }
 
-    public Task(Date createdAt, Date updatedAt, Date dueDate, Date resolvedAt, String title,
+    public Task(LocalDateTime createdAt, LocalDateTime updatedAt, LocalDateTime dueDate, LocalDateTime resolvedAt,
+            String title,
             String description, int priority, boolean status) {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;

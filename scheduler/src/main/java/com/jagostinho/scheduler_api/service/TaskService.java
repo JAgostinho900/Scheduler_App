@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,7 @@ public class TaskService {
     }
 
     public ResponseEntity<List<Task>> getTasks() {
-        return new ResponseEntity<>(taskRepository.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>(taskRepository.findAll(Sort.by(Sort.Direction.DESC, "createdAt")), HttpStatus.OK);
     }
 
     public ResponseEntity<Task> getTaskById(Long id) {
