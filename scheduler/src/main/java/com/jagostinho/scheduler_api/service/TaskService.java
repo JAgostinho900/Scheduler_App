@@ -29,10 +29,12 @@ public class TaskService {
         this.taskRepository = taskRepository;
     }
 
+    // Get all tasks
     public ResponseEntity<List<Task>> getTasks() {
         return new ResponseEntity<>(taskRepository.findAll(Sort.by(Sort.Direction.DESC, "createdAt")), HttpStatus.OK);
     }
 
+    // Get task by id
     public ResponseEntity<Task> getTaskById(Long id) {
         Optional<Task> optionalTask = taskRepository.findById(id);
         if (optionalTask.isPresent()) {
@@ -41,10 +43,12 @@ public class TaskService {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    // Create task
     public ResponseEntity<Task> createTask(Task task) {
         return new ResponseEntity<>(taskRepository.save(task), HttpStatus.CREATED);
     }
 
+    // Update task
     public ResponseEntity<Task> updateTask(Task task) {
         Optional<Task> optionalTask = taskRepository.findById(task.getId());
         if (optionalTask.isPresent()) {
@@ -53,6 +57,7 @@ public class TaskService {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    // Delete task
     public ResponseEntity<Task> deleteTask(Long id) {
         Optional<Task> optionalTask = taskRepository.findById(id);
         if (optionalTask.isPresent()) {

@@ -10,7 +10,6 @@ public class SchedulerApplication {
 		SpringApplication.run(SchedulerApplication.class, args);
 	}
 
-	// TODO: Sort create all
 	// NTH: Return custom message
 
 }
