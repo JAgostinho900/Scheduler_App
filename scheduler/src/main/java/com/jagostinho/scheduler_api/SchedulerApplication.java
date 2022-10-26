@@ -10,7 +10,7 @@ public class SchedulerApplication {
 		SpringApplication.run(SchedulerApplication.class, args);
 	}
 
-	// TODO: Methods have to return correct http: f.e. post -> 201
+	// TODO: Sort create all
 	// NTH: Return custom message
 
 }

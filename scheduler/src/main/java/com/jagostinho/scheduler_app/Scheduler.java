@@ -5,15 +5,24 @@ import java.util.TimerTask;
 
 public class Scheduler {
 
-    public Scheduler() {
+    private Timer timer = null;
 
+    private TimerTask timerTask;
+
+    public TimerTask getTimerTask() {
+        return timerTask;
     }
 
-    // TODO: Tem de cumprir criterios SOLID
+    public void setTimerTask(TimerTask timerTask) {
+        this.timerTask = timerTask;
+    }
 
-    public void executeScheduler() {
-        Timer timer = new Timer();
-        TimerTask task = new SchedulerTask();
-        timer.schedule(task, 200, 5000);
+    public Scheduler(TimerTask timerTask) {
+        this.timer = new Timer();
+        this.timerTask = timerTask;
+    }
+
+    public void executeScheduler(long delay, long interval) {
+        timer.schedule(timerTask, delay, interval);
     }
 }

@@ -4,11 +4,9 @@ import java.util.TimerTask;
 
 import org.springframework.web.client.RestTemplate;
 
-import com.jagostinho.scheduler_api.business.Task;
+import com.jagostinho.scheduler_api.domain.Task;
 
 public class SchedulerTask extends TimerTask {
-
-    // TODO: Tem de cumprir criterios SOLID
 
     @Override
     public void run() {
