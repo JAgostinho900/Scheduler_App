@@ -1,7 +1,7 @@
 package com.jagostinho.scheduler_api.domain;
 
 import java.io.Serializable;
-import java.sql.Date;
+
 import java.time.LocalDateTime;
 
 import javax.persistence.*;
@@ -10,6 +10,7 @@ import lombok.*;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @Entity
 @Table(name = "tasks")
@@ -67,23 +68,6 @@ public class Task implements Serializable {
         this.description = description;
         this.priority = priority;
         this.status = status;
-    }
-
-    // #endregion
-
-    // #region ToString
-
-    // Have a date format (dd/MM/yyyy)
-    public String toString() {
-        return "TaskModel{" + "id=" + id +
-                ", createdAt='" + createdAt + '\'' +
-                ", updatedAt='" + updatedAt + '\'' +
-                ", dueDate='" + dueDate + '\'' +
-                ", resolvedAt='" + resolvedAt + '\'' +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", priority='" + priority + '\'' +
-                ", status=" + status + '}';
     }
 
     // #endregion
