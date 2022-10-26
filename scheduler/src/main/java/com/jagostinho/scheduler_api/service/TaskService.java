@@ -1,12 +1,12 @@
-package com.jagostinho.scheduler.service;
+package com.jagostinho.scheduler_api.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.jagostinho.scheduler.business.Task;
-import com.jagostinho.scheduler.dal.TaskRepository;
+import com.jagostinho.scheduler_api.business.Task;
+import com.jagostinho.scheduler_api.dal.TaskRepository;
 
 @Service
 public class TaskService {

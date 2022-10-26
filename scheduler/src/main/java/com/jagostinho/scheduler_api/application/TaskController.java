@@ -1,4 +1,4 @@
-package com.jagostinho.scheduler.application;
+package com.jagostinho.scheduler_api.application;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jagostinho.scheduler.business.Task;
-import com.jagostinho.scheduler.service.TaskService;
+import com.jagostinho.scheduler_api.business.Task;
+import com.jagostinho.scheduler_api.service.TaskService;
 
 @RestController
 @RequestMapping(path = "api/v1/task")

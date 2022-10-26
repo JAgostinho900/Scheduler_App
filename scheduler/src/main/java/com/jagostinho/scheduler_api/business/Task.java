@@ -1,4 +1,4 @@
-package com.jagostinho.scheduler.business;
+package com.jagostinho.scheduler_api.business;
 
 import java.sql.Date;
 
