@@ -1,6 +1,7 @@
 package com.jagostinho.scheduler_app;
 
 import java.time.LocalDateTime;
+import java.util.Random;
 
 import com.jagostinho.scheduler_api.domain.Task;
 import com.jagostinho.scheduler_app.Scheduler.Scheduler;
@@ -8,16 +9,19 @@ import com.jagostinho.scheduler_app.Task.SchedulerCreateTask;
 
 public class SchedulerMain {
     public static void main(String[] args) {
+
         // Create Task
-        LocalDateTime date = LocalDateTime.of(2022, 10, 26, 10, 0, 0);
+        LocalDateTime date = LocalDateTime.now();
+        Random random = new Random();
+
         Task task = new Task(
                 date,
                 date,
                 date,
                 date,
-                "task1",
-                "description1",
-                1,
+                "task" + random.nextInt(1000),
+                "description1" + random.nextInt(1000),
+                random.nextInt(10),
                 true);
 
         // Create Scheduler
