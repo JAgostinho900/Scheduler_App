@@ -1,0 +1,10 @@
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\domain\Task.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\util\TaskMapper.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\dal\TaskRepository.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\scheduler\Scheduler.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\scheduler\SchedulerCreateTask.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\SchedulerApplication.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\config\TaskConfig.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\dto\TaskDTO.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\application\TaskController.java
+d:\Entrevistas\Craftworks\Scheduler_App\scheduler\src\main\java\com\jagostinho\scheduler_api\service\TaskService.java
